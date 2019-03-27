@@ -27,13 +27,13 @@ newGame.addEventListener('click', function () {
     gameStarted = true;
     gameOver = false;
     playerWon = false;
-    
+
     deck = createDeck();
     shuffle(deck);
 
     dealerCards = [getNextCard(), getNextCard()];
     playerCards = [getNextCard(), getNextCard()];
-    
+
     newGame.style.display = "none";
     hit.style.display = "inline";
     stay.style.display = "inline";
