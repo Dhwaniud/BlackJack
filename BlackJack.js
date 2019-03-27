@@ -27,13 +27,13 @@ newGame.addEventListener('click', function () {
     gameStarted = true;
     gameOver = false;
     playerWon = false;
-
+    
     deck = createDeck();
     shuffle(deck);
 
     dealerCards = [getNextCard(), getNextCard()];
     playerCards = [getNextCard(), getNextCard()];
-
+    
     newGame.style.display = "none";
     hit.style.display = "inline";
     stay.style.display = "inline";
@@ -42,6 +42,9 @@ newGame.addEventListener('click', function () {
 
 hit.addEventListener('click', function () {
     playerCards.push(getNextCard());
+    if(playerCards.length >= 5) {
+        gameOver = true;
+    }
     CheckForEndOfGame();
     showStatus();
 })
@@ -133,7 +136,7 @@ function updateScore() {
 function CheckForEndOfGame() {
     updateScore();
     if (gameOver) {
-        while (dealerScore < playerScore && dealerScore < 21 && playerScore < 21) {
+        while (dealerScore < playerScore && dealerScore < 21 && playerScore < 21 && dealerCards.length < 5) {
             dealerCards.push(getNextCard());
             updateScore();
         }
