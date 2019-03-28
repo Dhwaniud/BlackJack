@@ -1,4 +1,3 @@
-
 function CheckForEndOfGame() {
     updateScore();
     if (gameOver) {
