@@ -2,6 +2,7 @@ newGame.addEventListener('click', function () {
     gameStarted = true;
     gameOver = false;
     playerWon = false;
+    gameTie = false;
 
     deck = createDeck();
     shuffle(deck);

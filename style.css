@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
+
+h1 {
+    font-family: "ZCOOL XiaoWei", serif;
+}
+
+body {
+    background-image: url("BJ Wallpaper 2\.jpg");
+}
+
+.container {
+    height: 100vh;
+    background-color: rgba(214, 128, 128, 0.73);
+}

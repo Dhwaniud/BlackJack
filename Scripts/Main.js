@@ -13,6 +13,7 @@ let stay = document.getElementById("stay");
 let gameStarted = false,
     gameOver = false,
     playerWon = false,
+    gameTie = false,
     dealerCards = [],
     playerCards = [],
     dealerScore = 0,

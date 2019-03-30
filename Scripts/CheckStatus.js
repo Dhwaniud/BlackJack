@@ -22,7 +22,7 @@ function CheckForEndOfGame() {
             playerWon = true;
         }
         else {
-            textArea.innerText += "It's a Tie!!";
+            gameTie = true;
         }
 
     }
@@ -31,7 +31,7 @@ function CheckForEndOfGame() {
 
 function showStatus() {
     if (!gameStarted) {
-        textArea.innerText = "Welcome To BlackJack!!!";
+      //  textArea.innerText = "Welcome To BlackJack!!!";
         return;
     }
 
@@ -51,7 +51,10 @@ function showStatus() {
         + "Player has : \n" + playerCardString + "(Score :" + playerScore + ") \n\n";
 
     if (gameOver) {
-        if (playerWon) {
+        if(gameTie) {
+            textArea.innerText += "It's a Tie!!!";
+        }
+        else if (playerWon) {
             textArea.innerText += "Player Won!!!";
         }
         else {
